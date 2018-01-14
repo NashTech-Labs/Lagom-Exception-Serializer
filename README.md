@@ -7,7 +7,7 @@ Steps to follow to run this application:
 - Open the terminal.
 - Clone the project ```git clone https://github.com/sajitgupta1008/Lagom-Exception-Serializer-Demo.git```.
 - ```cd Lagom-Exception-Serializer-Demo```.
-- Execute ``mvn clean compile```.
+- Execute ```mvn clean compile```.
 - Run the application using ```mvn lagom:runAll```.
 
 You can check which services are up by hitting ```http://localhost:8000/services```. There, you can see that along with cassandra and kafka, services named 'external-service' and 'demo' are also running.
