@@ -5,8 +5,8 @@
 Steps to follow to run this application:
 
 - Open the terminal.
-- Clone the project ```git clone git@github.com:DivyaDua/lagom-persistent-read-side.git```.
-- ```cd lagom-persistent-read-side```.
+- Clone the project ```git clone https://github.com/sajitgupta1008/Lagom-Exception-Serializer-Demo.git```.
+- ```cd Lagom-Exception-Serializer-Demo```.
 - Execute ``mvn clean compile```.
 - Run the application using ```mvn lagom:runAll```.
 
