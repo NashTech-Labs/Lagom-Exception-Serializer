@@ -28,7 +28,6 @@ public class ExternalExceptionSerializer implements ExceptionSerializer {
         
         try {
             String errorJson = message.messageAsText();
-            System.out.println("\nerror : "+errorJson);
             fault = OBJECT_MAPPER.readValue(errorJson, Fault.class);
         } catch (IOException ex) {
             
@@ -36,8 +35,6 @@ public class ExternalExceptionSerializer implements ExceptionSerializer {
                     .errorMessage("No payload available")
                     .build();
         }
-        System.out.println("\n\nfault : "+fault);
-    
         return fault;
     }
 }
