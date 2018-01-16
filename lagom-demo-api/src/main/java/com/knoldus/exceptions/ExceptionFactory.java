@@ -2,7 +2,7 @@ package com.knoldus.exceptions;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class ExternalExceptionFactory {
+public class ExceptionFactory {
     
     public static Throwable getInstance(Fault fault) {
         if (fault == null)

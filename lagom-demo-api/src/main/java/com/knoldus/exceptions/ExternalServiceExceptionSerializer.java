@@ -8,10 +8,10 @@ import com.lightbend.lagom.javadsl.api.transport.MessageProtocol;
 import java.io.IOException;
 import java.util.Collection;
 
-public class ExternalExceptionSerializer implements ExceptionSerializer {
+public class ExternalServiceExceptionSerializer implements ExceptionSerializer {
     
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
-    public static final ExternalExceptionSerializer INSTANCE = new ExternalExceptionSerializer();
+    public static final ExternalServiceExceptionSerializer INSTANCE = new ExternalServiceExceptionSerializer();
     
     @Override
     public RawExceptionMessage serialize(Throwable exception, Collection<MessageProtocol> accept) {
@@ -20,7 +20,7 @@ public class ExternalExceptionSerializer implements ExceptionSerializer {
     
     @Override
     public Throwable deserialize(RawExceptionMessage message) {
-        return ExternalExceptionFactory.getInstance(mapExceptionToFault(message));
+        return ExceptionFactory.getInstance(mapExceptionToFault(message));
     }
     
     Fault mapExceptionToFault(RawExceptionMessage message) {

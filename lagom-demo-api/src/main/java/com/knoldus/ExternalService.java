@@ -1,7 +1,7 @@
 package com.knoldus;
 
 import akka.NotUsed;
-import com.knoldus.exceptions.ExternalExceptionSerializer;
+import com.knoldus.exceptions.ExternalServiceExceptionSerializer;
 import com.lightbend.lagom.javadsl.api.Descriptor;
 import com.lightbend.lagom.javadsl.api.Service;
 import com.lightbend.lagom.javadsl.api.ServiceCall;
@@ -15,7 +15,7 @@ public interface ExternalService extends Service {
                 .withCalls(
                         Service.restCall(Method.GET, "/user", this::getUser)
                 )
-                .withExceptionSerializer(ExternalExceptionSerializer.INSTANCE)
+                .withExceptionSerializer(ExternalServiceExceptionSerializer.INSTANCE)
                 .withAutoAcl(true);
     }
     
